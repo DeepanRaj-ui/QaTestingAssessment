@@ -1,5 +1,5 @@
 
-# OrangeHRM Test Automation Framework
+# Test Automation Framework
 
 This project is a test automation framework for testing the [OrangeHRM](https://www.orangehrm.com/) application. The framework is built using **Selenium WebDriver**, **Cucumber**, **Java**, and the **Page Object Model (POM)** design pattern. It includes test scenarios for verifying the login functionality and can be extended for other features of OrangeHRM.
 
