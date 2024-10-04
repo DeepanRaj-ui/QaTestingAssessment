@@ -6,12 +6,10 @@ This project is a test automation framework for testing the [OrangeHRM](https://
 ## Table of Contents
 
 - [Test Case Design](#test-case-design)
-- [Code Structure](#code-structure)
 - [Setup and Installation](#setup-and-installation)
 - [Running Tests](#running-tests)
 - [Test Data](#test-data)
 - [Reporting](#reporting)
-- [Contributing](#contributing)
 
 ---
 
