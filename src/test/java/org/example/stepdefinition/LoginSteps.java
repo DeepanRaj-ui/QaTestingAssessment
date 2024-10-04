@@ -2,16 +2,15 @@ package org.example.stepdefinition;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.example.pageObjects.LoginPage;
 import org.example.utilities.ExcelReader;
 import org.example.utilities.configReader;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 public class LoginSteps {
     WebDriver driver = Hooks.driver;
@@ -34,6 +33,31 @@ public class LoginSteps {
         Assert.assertTrue(loginPage.verifyDashboard(),"Dashboard is not avilable");
     }
 
+    @Then("User click admin from side bar")
+    public void user_click_admin_from_side_bar() {
+        loginPage.clickAdmin();
+    }
+
+    @Then("User click add button")
+    public void user_click_add_button() {
+        loginPage.clickAddButton();
+    }
+
+    @Then("User click user role from the drop down")
+    public void user_click_user_role_from_the_drop_down() {
+        Random random = new Random();
+        String username = "User" + random.nextInt(1000);
+        loginPage.clickUserRole();
+        loginPage.clickAdminRole();
+        loginPage.clickStatusRole();
+        loginPage.clickEnabled();
+        loginPage.entervaluesinSection("Employee Name","1234  kumar");
+        loginPage.entervaluesinSection("Username",username);
+        loginPage.entervaluesinSection("Password","1234567a");
+        loginPage.entervaluesinSection("Confirm Password","1234567a");
+        loginPage.clickSave();
+
+    }
 
 
 }
