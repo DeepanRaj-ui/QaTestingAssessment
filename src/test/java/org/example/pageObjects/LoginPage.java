@@ -23,7 +23,7 @@ public class LoginPage {
     WebElement loginButton;
 
     @FindBy(xpath = "//div[@class='oxd-topbar-header-title']//*[text()='Dashboard']")
-    WebElement loginButtonnew;
+    WebElement DashboardName;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -44,5 +44,10 @@ public class LoginPage {
     public void clickLogin() {
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         loginButton.click();
+    }
+
+    public boolean verifyDashboard(){
+        wait.until(ExpectedConditions.visibilityOf(DashboardName));
+        return DashboardName.isDisplayed();
     }
 }

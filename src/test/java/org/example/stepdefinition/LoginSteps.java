@@ -8,6 +8,7 @@ import org.example.utilities.ExcelReader;
 import org.example.utilities.configReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import java.io.IOException;
 import java.util.List;
@@ -30,7 +31,7 @@ public class LoginSteps {
 
     @Then("User verifies logged in successfully")
     public void user_verifies_logged_in_successfully() {
-
+        Assert.assertTrue(loginPage.verifyDashboard(),"Dashboard is not avilable");
     }
 
 
